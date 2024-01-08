@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+  <test thread-count="5" name="Test">
+    <classes>
+      <class name="test.RemoveElementsFromCart"/>
+      <class name="test.verifyIfUserIsAbleToSearchProduct"/>
+      <class name="test.AddProductUsingDescription"/>
+      <class name="test.AddMultipleProductOnCart"/>
+      <class name="test.AddtoCartPage"/>
+      <class name="test.verifyShoppingCategoriesTest"/>
+      <class name="test.productDisplayPage"/>
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->

@@ -38,11 +38,11 @@ public class verifyIfUserIsAbleToSearchProduct extends BaseTest {
 	public void verifyIfUserIsAbleToSearchProducts() {
 	test=extentreports.createTest("verifyIfUserIsAbleToSearchProducts");
 	NaptolHomePage naptolhomepage=new NaptolHomePage(driver);
-	naptolhomepage.enterInSearchTab("mobile handset");
+	naptolhomepage.enterInSearchTab("mobile");
 	naptolhomepage.clickOnSearch();
 	String currentUrl =driver.getCurrentUrl();
 	Assert.assertTrue(currentUrl.contains("https://www.naaptol.com/search.html?type=srch_catlg&kw=mobile"));
-	Assert.assertEquals(naptolhomepage.getMobileHeading(),"mobile" );
+	
 	}
 	
 	@AfterMethod

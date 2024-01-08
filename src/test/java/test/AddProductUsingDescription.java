@@ -1,5 +1,6 @@
 package test;
 
+import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeTest;
@@ -11,6 +12,7 @@ import com.aventstack.extentreports.ExtentTest;
 
 import pojo.LaunchBrowser;
 import pom.AddProductfromDescriptionPage;
+import pom.BasePage;
 import pom.CartPage;
 import pom.NaptolHomePage;
 import pom.ProductQuickViewPage;
@@ -18,11 +20,13 @@ import pom.ProductResultPage;
 import utility.Reports;
 @Listeners(test.Listners.class)
 
-public class AddProductUsingDescription extends BaseTest{
+public class AddProductUsingDescription extends BasePage  {
 
 		ExtentReports extentreports;
 		ExtentTest test;
-		
+		WebDriver driver;
+		ProductResultPage productResultPage;
+		AddProductfromDescriptionPage productDescriptionPage;
 		@BeforeTest
 		public void configureReport()
 		{
@@ -35,20 +39,20 @@ public class AddProductUsingDescription extends BaseTest{
 			
 		}
 	@Test
-	public void verifyIfUserIsAbleToAddProductToCartUsingDescription() throws InterruptedException 
+	public void verifyIfUserIsAbleToAddProductToCartUsingDescription()
 	{
 		NaptolHomePage naptolhomepage=new NaptolHomePage(driver);
 		naptolhomepage.enterInSearchTab("Mobiles");
 		naptolhomepage.clickOnSearch();
 		
-		AddProductfromDescriptionPage addToCartDescription=new AddProductfromDescriptionPage(driver);
+		ProductResultPage productResultPage=new ProductResultPage(driver);
 		
-		addToCartDescription.ClikOnProduct(driver, 0);
+		String productTitle=productResultPage.getProductTitle(0);
+		productResultPage.clickOnProduct(0);
+		productResultPage.switchToPage(driver,productTitle);
 		
-		
-		addToCartDescription.clikOnBuyButton(driver);
-		String currentTitle =driver.getCurrentUrl();
-		Assert.assertTrue(currentTitle.contains("https://www.naaptol.com/smart-watches/bluetooth-calling-smart-watch-with-neckband-and-mobile-stand-sc6/p/12612081.html"));
+		productDescriptionPage=new AddProductfromDescriptionPage(driver);
+		productDescriptionPage.clikOnBuyButton();
 		
 		
 

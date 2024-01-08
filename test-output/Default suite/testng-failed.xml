@@ -3,13 +3,15 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="test.RemoveElementsFromCart">
+      <class name="test.verifyIfUserIsAbleToSearchProduct">
         <methods>
-          <include name="openApp"/>
-          <include name="verifyIfUserIsAbleToRemoveTheProductFromCart"/>
+          <include name="verifyIfUserIsAbleToSearchProducts"/>
           <include name="configureReport"/>
+          <include name="addTestStatus"/>
+          <include name="publishReports"/>
+          <include name="openApp"/>
         </methods>
-      </class> <!-- test.RemoveElementsFromCart -->
+      </class> <!-- test.verifyIfUserIsAbleToSearchProduct -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

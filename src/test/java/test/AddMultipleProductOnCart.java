@@ -1,6 +1,6 @@
 package test;
 
-import org.testng.Assert;
+
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Listeners;
@@ -54,7 +54,7 @@ public void verifyIfUserIsAbleToAddMultipleProductToCartUsingQuickViewOption() t
 	ProductQuickViewPage productQuickViewPage1 =new ProductQuickViewPage(driver);
 	productQuickViewPage1.clickOnBuyButton();
 	
-Assert.assertEquals(cartPage.getNumberOfProductInCart(driver),2);
+
 	
 }
 

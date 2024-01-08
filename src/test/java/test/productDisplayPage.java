@@ -43,11 +43,11 @@ public class productDisplayPage extends BaseTest{
 		NaptolHomePage naptolhomepage=new NaptolHomePage(driver);
 		naptolhomepage.enterInSearchTab("cooker");
 		naptolhomepage.clickOnSearch();
-		SoftAssert soft = new SoftAssert();
-
-		String currentUrl =driver.getCurrentUrl();
-		soft.assertTrue(currentUrl.contains("https://www.naaptol.com/search.html?type=srch_catlg&kw=cooker"));
-		//soft.assertEquals(naptolhomepage.getMobileHeading(),"mobile" );
+		
+		String title =driver.getTitle();
+		Assert.assertTrue(title.contains("cooker"));
+		
+		
 		ProductResultPage productResultPage=new ProductResultPage(driver);
 		Assert.assertTrue(productResultPage.getNumberOfProduct()>0);
 		
@@ -60,9 +60,10 @@ public class productDisplayPage extends BaseTest{
 		NaptolHomePage naptolhomepage=new NaptolHomePage(driver);
 		naptolhomepage.enterInSearchTab("iphone");
 		naptolhomepage.clickOnSearch();
-		SoftAssert soft=new SoftAssert();
-		String currentUrl1 =driver.getCurrentUrl();
-		soft.assertTrue(currentUrl1.contains("https://www.naaptol.com/search.html?type=srch_catlg&kw=iphone"));
+		
+		String title =driver.getTitle();
+		Assert.assertTrue(title.contains("iphone"));
+		
 		ProductResultPage productResultPage=new ProductResultPage(driver);
 		Assert.assertTrue(productResultPage.getNumberOfProduct()==0);
 		
