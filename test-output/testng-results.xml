@@ -2,24 +2,24 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-01-08T21:39:48 IST" name="Default suite" finished-at="2024-01-08T21:40:34 IST" duration-ms="45359">
+  <suite started-at="2024-01-08T21:57:39 IST" name="Default suite" finished-at="2024-01-08T21:58:03 IST" duration-ms="24143">
     <groups>
     </groups>
-    <test started-at="2024-01-08T21:39:48 IST" name="Default test" finished-at="2024-01-08T21:40:34 IST" duration-ms="45359">
-      <class name="test.AddMultipleProductOnCart">
-        <test-method is-config="true" signature="configureReport()[pri:0, instance:test.AddMultipleProductOnCart@51e69659]" started-at="2024-01-08T21:39:49 IST" name="configureReport" finished-at="2024-01-08T21:39:52 IST" duration-ms="3023" status="PASS">
+    <test started-at="2024-01-08T21:57:39 IST" name="Default test" finished-at="2024-01-08T21:58:03 IST" duration-ms="24143">
+      <class name="test.RemoveElementsFromCart">
+        <test-method is-config="true" signature="configureReport()[pri:0, instance:test.RemoveElementsFromCart@51e69659]" started-at="2024-01-08T21:57:39 IST" name="configureReport" finished-at="2024-01-08T21:57:40 IST" duration-ms="863" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- configureReport -->
-        <test-method is-config="true" signature="openApp()[pri:0, instance:test.AddMultipleProductOnCart@51e69659]" started-at="2024-01-08T21:39:52 IST" name="openApp" finished-at="2024-01-08T21:40:25 IST" duration-ms="33534" status="PASS">
+        <test-method is-config="true" signature="openApp()[pri:0, instance:test.RemoveElementsFromCart@51e69659]" started-at="2024-01-08T21:57:40 IST" name="openApp" finished-at="2024-01-08T21:57:55 IST" duration-ms="15811" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- openApp -->
-        <test-method signature="verifyIfUserIsAbleToAddMultipleProductToCartUsingQuickViewOption()[pri:0, instance:test.AddMultipleProductOnCart@51e69659]" started-at="2024-01-08T21:40:25 IST" name="verifyIfUserIsAbleToAddMultipleProductToCartUsingQuickViewOption" finished-at="2024-01-08T21:40:34 IST" duration-ms="8661" status="PASS">
+        <test-method signature="verifyIfUserIsAbleToRemoveTheProductFromCart()[pri:0, instance:test.RemoveElementsFromCart@51e69659]" started-at="2024-01-08T21:57:55 IST" name="verifyIfUserIsAbleToRemoveTheProductFromCart" finished-at="2024-01-08T21:58:03 IST" duration-ms="7341" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verifyIfUserIsAbleToAddMultipleProductToCartUsingQuickViewOption -->
-      </class> <!-- test.AddMultipleProductOnCart -->
+        </test-method> <!-- verifyIfUserIsAbleToRemoveTheProductFromCart -->
+      </class> <!-- test.RemoveElementsFromCart -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

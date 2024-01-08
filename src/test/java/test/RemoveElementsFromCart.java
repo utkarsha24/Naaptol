@@ -19,11 +19,14 @@ import utility.Reports;
 @Listeners(test.Listners.class)
 public class RemoveElementsFromCart extends BaseTest {
 
-	
-	
+	removeElement removes;
+	ProductResultPage productResultPage;
+	ProductQuickViewPage productQuickViewPage;
 	ExtentReports extentreports;
 	ExtentTest test;
+	CartPage cartPage;
 	
+		
 	@BeforeTest
 	public void configureReport()
 	{
@@ -36,7 +39,7 @@ public class RemoveElementsFromCart extends BaseTest {
 		
 	}
 @Test
-public void verifyIfUserIsAbleToRemoveTheProductFromCart() {
+public void verifyIfUserIsAbleToRemoveTheProductFromCart() throws InterruptedException {
 	NaptolHomePage naptolhomepage=new NaptolHomePage(driver);
 	naptolhomepage.enterInSearchTab("cooker");
 	naptolhomepage.clickOnSearch();
@@ -50,11 +53,18 @@ public void verifyIfUserIsAbleToRemoveTheProductFromCart() {
 	
 	CartPage cartPage =new CartPage(driver);
 	
-	removeElement removes=new removeElement(driver);
-	removes.clickOnRemoveElements();
+	cartPage.clickOnContinueShopping();
 	
-	Assert.assertEquals(cartPage.getNumberOfProductInCart(driver),0);
+	productResultPage =new ProductResultPage(driver);
+	productResultPage.clickOnQuickView(driver, 1);
+
+	productQuickViewPage =new ProductQuickViewPage(driver);
+	productQuickViewPage.clickOnBuyButton();
 	
+	removes = new removeElement(driver);
+	removes.clickOnRemove(driver, 0);
+	
+	removes.clickOnClose();
 	
 	
 
