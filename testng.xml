@@ -1,9 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite name="Suite">
-  <test thread-count="5" name="Test">
+  <test thread-count="5" name="CromeTest">
+	  
+	<!--  <parameter name="i" value="20"></parameter>
+	  <parameter name="j" value="30"></parameter>
+	  <parameter name="k" value="Samples"></parameter>-->
+	  
+	  <parameter name="browser" value="Chrome"></parameter>
     <classes>
-      <class name="test.RemoveElementsFromCart"/>
+		
+ <class name="test.RemoveElementsFromCart"/>
+      <class name="test.verifyIfUserIsAbleToSearchProduct"/>
+      <class name="test.AddProductUsingDescription"/>
+      <class name="test.AddMultipleProductOnCart"/>
+      <class name="test.AddtoCartPage"/>
+      <class name="test.verifyShoppingCategoriesTest"/>
+      <class name="test.productDisplayPage"/>
+    </classes>
+  </test> <!-- Test -->
+  
+  
+  <test thread-count="5" name="EdgeTest">
+	   
+	<parameter name="browser" value="Edge"></parameter>
+    <classes>
+		
+ <class name="test.RemoveElementsFromCart"/>
       <class name="test.verifyIfUserIsAbleToSearchProduct"/>
       <class name="test.AddProductUsingDescription"/>
       <class name="test.AddMultipleProductOnCart"/>
