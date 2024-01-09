@@ -7,6 +7,7 @@ import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Listeners;
+import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 import com.aventstack.extentreports.ExtentReports;
@@ -29,10 +30,10 @@ public class verifyIfUserIsAbleToSearchProduct extends BaseTest {
 		extentreports=Reports.generateReport();
 	}
 	
+	@Parameters({"browser"})
 	@BeforeMethod
-	public void openApp() {
-		driver=LaunchBrowser.chrome();
-		
+	public void openApp(String browser) {
+		driver=LaunchBrowser.browser(browser);
 	}
 	@Test
 	public void verifyIfUserIsAbleToSearchProducts() {
@@ -71,6 +72,7 @@ public class verifyIfUserIsAbleToSearchProduct extends BaseTest {
 		 extentreports.flush();
         }
 	
+	 
 }
 
 

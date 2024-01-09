@@ -2,9 +2,11 @@ package test;
 
 import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
+import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Listeners;
+import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 import com.aventstack.extentreports.ExtentReports;
@@ -33,9 +35,10 @@ public class AddProductUsingDescription extends BasePage  {
 			extentreports=Reports.generateReport();
 		}
 		
+		@Parameters({"browser"})
 		@BeforeMethod
-		public void openApp() {
-			driver=LaunchBrowser.chrome();
+		public void openApp(String browser) {
+			driver=LaunchBrowser.browser(browser);
 			
 		}
 	@Test
@@ -56,5 +59,10 @@ public class AddProductUsingDescription extends BasePage  {
 		
 		
 
+	}
+	@AfterMethod
+	public void close()
+	{
+		driver.close();
 	}
 	}
