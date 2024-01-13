@@ -5,7 +5,10 @@
     <classes>
       <class name="test.VerifyDetails">
         <methods>
-          <include name="AddTwoToCartAndVerifyIfUnitPriceShippingPriceIsEqualToOrderAmountAndAlsoVerifyIfSumOfOrderAmountIsEqualToCartAmount"/>
+          <include name="configureReport"/>
+          <include name="addTestStatus"/>
+          <include name="publishReports"/>
+          <include name="verifyIfProductsDetailsOnShoppingcartAreSimilarToProductAddedFromQuickViewTab"/>
           <include name="openApp"/>
         </methods>
       </class> <!-- test.VerifyDetails -->

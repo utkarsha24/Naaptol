@@ -10,13 +10,13 @@
 	  <parameter name="browser" value="Chrome"></parameter>
     <classes>
 		
- <class name="test.RemoveElementsFromCart"/>
-      <class name="test.verifyIfUserIsAbleToSearchProduct"/>
+ 	  <class name="test.RemoveElementsFromCart"/>
+      <class name="test.ShoppingCategories"/>
       <class name="test.AddProductUsingDescription"/>
       <class name="test.AddMultipleProductOnCart"/>
       <class name="test.AddtoCartPage"/>
-      <class name="test.verifyShoppingCategoriesTest"/>
-      <class name="test.productDisplayPage"/>
+      <class name="test.SearchProductTest"/>
+      <class name="test.ProductDisplayPage"/>
     </classes>
   </test> <!-- Test -->
   
@@ -26,13 +26,13 @@
 	<parameter name="browser" value="Edge"></parameter>
     <classes>
 		
- <class name="test.RemoveElementsFromCart"/>
-      <class name="test.verifyIfUserIsAbleToSearchProduct"/>
+      <class name="test.RemoveElementsFromCart"/>
+      <class name="test.ShoppingCategories"/>
       <class name="test.AddProductUsingDescription"/>
       <class name="test.AddMultipleProductOnCart"/>
       <class name="test.AddtoCartPage"/>
-      <class name="test.verifyShoppingCategoriesTest"/>
-      <class name="test.productDisplayPage"/>
+      <class name="test.SearchProductTest"/>
+      <class name="test.ProductDisplayPage"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->

@@ -46,7 +46,7 @@ public class VerifyDetails extends BaseTest {
 		
 	}
 @Test(priority = 1)
-public void VerifyIfProductsDetailsOnQuickViewTab() throws InterruptedException {//test No 9
+	public void VerifyIfProductsDetailsOnQuickViewTab() throws InterruptedException {//test No 9
 	test=extentreports.createTest("VerifyIfProductsDetailsOnQuickViewTab");
 	NaptolHomePage naptolhomepage=new NaptolHomePage(driver);
 	naptolhomepage.enterInSearchTab("headphones");
@@ -64,8 +64,8 @@ public void VerifyIfProductsDetailsOnQuickViewTab() throws InterruptedException 
 	
 	Assert.assertEquals(productQuickViewPage.getQuicViewTitle(0), title);
 }
-@Test(priority = 2)
-public void verifyIfProductsDetailsOnShoppingcartAreSimilarToProductAddedFromQuickViewTab() throws InterruptedException {
+	@Test(priority = 2)
+	public void verifyIfProductsDetailsOnShoppingcartAreSimilarToProductAddedFromQuickViewTab() throws InterruptedException {
 	
 	test=extentreports.createTest("verifyIfProductsDetailsOnShoppingcartAreSimilarToProductAddedFromQuickViewTab");
 	NaptolHomePage naptolhomepage=new NaptolHomePage(driver);
@@ -89,15 +89,15 @@ public void verifyIfProductsDetailsOnShoppingcartAreSimilarToProductAddedFromQui
 	
 	Assert.assertEquals(cartPage.getProductTitle(0, driver),Title);
 	
-	Assert.assertEquals(cartPage.getCartPrice(1),Price);
+	Assert.assertEquals(cartPage.getCartPrice(0),Price);
 	
-	Assert.assertEquals(cartPage.getCartshipingCharges(1),Shiping);
+	Assert.assertEquals(cartPage.getCartshipingCharges(0),Shiping);
 }
 
-@Test(priority = 3)
-public void addSingleToCartAndVerifyIfUnitPriceShippingPriceIsEqualToOrderAmount() throws InterruptedException
-{
-test=extentreports.createTest("addSingleToCartAndVerifyIfUnitPriceShippingPriceIsEqualToOrderAmount");
+	@Test(priority = 3)
+	public void addSingleToCartAndVerifyIfUnitPriceShippingPriceIsEqualToOrderAmount() throws InterruptedException
+	{
+	test=extentreports.createTest("addSingleToCartAndVerifyIfUnitPriceShippingPriceIsEqualToOrderAmount");
 	NaptolHomePage naptolhomepage=new NaptolHomePage(driver);
 	naptolhomepage.enterInSearchTab("mobile");
 	naptolhomepage.clickOnSearch();
@@ -116,9 +116,9 @@ test=extentreports.createTest("addSingleToCartAndVerifyIfUnitPriceShippingPriceI
 		
 }
 
-@Test(priority = 4) 
-public void AddTwoToCartAndVerifyIfUnitPriceShippingPriceIsEqualToOrderAmountAndAlsoVerifyIfSumOfOrderAmountIsEqualToCartAmount() throws InterruptedException
-{
+	@Test(priority = 4) 
+	public void AddTwoToCartAndVerifyIfUnitPriceShippingPriceIsEqualToOrderAmountAndAlsoVerifyIfSumOfOrderAmountIsEqualToCartAmount() throws InterruptedException
+	{
 	test=extentreports.createTest("AddTwoToCartAndVerifyIfUnitPriceShippingPriceIsEqualToOrderAmountAndAlsoVerifyIfSumOfOrderAmountIsEqualToCartAmount");
 	naptolhomepage=new NaptolHomePage(driver);
 	naptolhomepage.enterInSearchTab("Mobiles");
@@ -153,9 +153,9 @@ public void AddTwoToCartAndVerifyIfUnitPriceShippingPriceIsEqualToOrderAmountAnd
 }
 
 
-@AfterMethod
-public void addTestStatus(ITestResult result)
-{
+	@AfterMethod
+	public void addTestStatus(ITestResult result)
+	{
 	if(result.getStatus()==ITestResult.SUCCESS)
 	{
 		test.log(Status.PASS, result.getName());
@@ -171,8 +171,8 @@ public void addTestStatus(ITestResult result)
 
 }
 
-@AfterTest
-public void publishReports() {
+	@AfterTest
+	public void publishReports() {
 
 	 extentreports.flush();
    }
