@@ -7,12 +7,12 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class removeElement {
+public class RemoveElement {
 	
 	@FindBy (xpath = "(//a[text()='Remove'])[1]")private List<WebElement> remove;
 	@FindBy (xpath = "//a[@title='Close']")private WebElement close;
 	
-	public removeElement(WebDriver driver)
+	public RemoveElement(WebDriver driver)
 	{
 		PageFactory.initElements(driver, this);
 	}

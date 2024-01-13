@@ -20,7 +20,7 @@ import pom.NaptolHomePage;
 import pom.ProductResultPage;
 import utility.Reports;
 @Listeners(test.Listners.class)
-public class productDisplayPage extends BaseTest{
+public class ProductDisplayPage extends BaseTest{
 	
 	ExtentReports extentreports;
 	ExtentTest test;

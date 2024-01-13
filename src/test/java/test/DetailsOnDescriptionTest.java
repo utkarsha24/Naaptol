@@ -1,12 +1,11 @@
 package test;
 
-
+import org.openqa.selenium.WebDriver;
 import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeTest;
-import org.testng.annotations.Listeners;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
@@ -15,53 +14,49 @@ import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.Status;
 
 import pojo.LaunchBrowser;
-import pom.CartPage;
+import pojo.LaunchBrowser1;
+import pom.AddProductfromDescriptionPage;
 import pom.NaptolHomePage;
-import pom.ProductQuickViewPage;
 import pom.ProductResultPage;
 import utility.Reports;
-@Listeners(test.Listners.class)
-public class AddMultipleProductOnCart extends BaseTest{
-	
+
+public class DetailsOnDescriptionTest extends BaseTest{
+
 	ExtentReports extentreports;
 	ExtentTest test;
-	
+	WebDriver driver;
+	ProductResultPage productResultPage;
+	AddProductfromDescriptionPage productDescriptionPage;
 	@BeforeTest
 	public void configureReport()
 	{
 		extentreports=Reports.generateReport();
 	}
-	@Parameters({"browser"})
+	
+	//@Parameters({"browser"})
 	@BeforeMethod
-	public void openApp(String browser) {
-		driver=LaunchBrowser.browser(browser);
-		
+	public void openApp() {
+		driver=LaunchBrowser1.chrome();
 	}
 @Test
-public void verifyIfUserIsAbleToAddMultipleProductToCartUsingQuickViewOption() throws InterruptedException {
-	test=extentreports.createTest("verifyIfUserIsAbleToAddMultipleProductToCartUsingQuickViewOption");
+public void verifyIfUserIsAbleToAddProductToCartUsingDescription()
+{
+	test=extentreports.createTest("verifyIfUserIsAbleToAddProductToCartUsingDescription");
 	NaptolHomePage naptolhomepage=new NaptolHomePage(driver);
 	naptolhomepage.enterInSearchTab("Mobiles");
 	naptolhomepage.clickOnSearch();
 	
-	ProductResultPage productResultPage =new ProductResultPage(driver);
-	productResultPage.clickOnQuickView(driver, 0);
+	ProductResultPage productResultPage=new ProductResultPage(driver);
 	
-	ProductQuickViewPage productQuickViewPage =new ProductQuickViewPage(driver);
-	productQuickViewPage.clickOnBuyButton();
+	String productTitle=productResultPage.getProductTitle(0);
+	productResultPage.clickOnProduct(0);
+	productResultPage.switchToPage(driver,productTitle);
 	
+	productDescriptionPage=new AddProductfromDescriptionPage(driver);
+	productDescriptionPage.clikOnBuyButton();
 	
-	CartPage cartPage =new CartPage(driver);
-	cartPage.clickOnContinueShopping();
-	
-	ProductResultPage productResultPage1 =new ProductResultPage(driver);
-	productResultPage1.clickOnQuickView(driver, 1);
-	
-	ProductQuickViewPage productQuickViewPage1 =new ProductQuickViewPage(driver);
-	productQuickViewPage1.clickOnBuyButton();
 	
 
-	
 }
 @AfterMethod
 public void addTestStatus(ITestResult result)
@@ -85,6 +80,7 @@ public void addTestStatus(ITestResult result)
 public void publishReports() {
 
 	 extentreports.flush();
+   }
 
 }
-}
+
