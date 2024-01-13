@@ -1,5 +1,7 @@
 package pom;
 
+import java.util.List;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -8,35 +10,37 @@ import org.openqa.selenium.support.PageFactory;
 public class ProductQuickViewPage {
 
 	
-	@FindBy (xpath = "//div[@id='square_Details']//h1")private WebElement productname;
+	@FindBy (xpath = "//div[@id='square_Details']//h1")private List<WebElement> productname;
 	@FindBy (xpath = "//span[@class='offer-price']")private WebElement price;
 	@FindBy (xpath = "//span[@class='ship-price']")private WebElement Shippingcharges;
-	@FindBy (xpath = "//a[@class='red_button icon chat']")private WebElement buyButton;
+	@FindBy (xpath = "//a[@id='cart-panel-button-0']")private WebElement buyButton;
 	
 	public ProductQuickViewPage(WebDriver driver)
 	{
 		PageFactory.initElements(driver, this);
 	}
 
-	public String getProductName()
+
+	public String getQuicViewTitle(int index) {
+		
+		 return productname.get(index).getText();
+		
+	}
+	public double getPrice()
 	{
-		return productname.getText();
+		return Double.parseDouble(price.getText());
 	}
 	
-	public String getPrice()
+	public void clickOnBuyButton() throws InterruptedException
 	{
-		return price.getText();
-	}
-	
-	public void clickOnBuyButton()
-	{
+		Thread.sleep(1000);
 		buyButton.click();
 	}
 	
-	public String getShipingCharges()
+	public double getShipingCharges()
 	{
 		String charges=Shippingcharges.getText();
 		String [] charge=charges.split(" ");
-		return charge[1];
+		return Double.parseDouble(charge[1]);
 	}
 }

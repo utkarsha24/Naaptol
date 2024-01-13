@@ -17,9 +17,9 @@ import com.aventstack.extentreports.Status;
 import pojo.LaunchBrowser;
 import pom.NaptolHomePage;
 import utility.Reports;
+
 @Listeners(test.Listners.class)
-public class verifyIfUserIsAbleToSearchProduct extends BaseTest {
-	
+public class ShoppingCategories extends BaseTest{
 	
 	ExtentReports extentreports;
 	ExtentTest test;
@@ -34,17 +34,21 @@ public class verifyIfUserIsAbleToSearchProduct extends BaseTest {
 	@BeforeMethod
 	public void openApp(String browser) {
 		driver=LaunchBrowser.browser(browser);
+		
 	}
-	@Test
-	public void verifyIfUserIsAbleToSearchProducts() {
-	test=extentreports.createTest("verifyIfUserIsAbleToSearchProducts");
-	NaptolHomePage naptolhomepage=new NaptolHomePage(driver);
-	naptolhomepage.enterInSearchTab("mobile");
-	naptolhomepage.clickOnSearch();
-	String currentUrl =driver.getCurrentUrl();
-	Assert.assertTrue(currentUrl.contains("https://www.naaptol.com/search.html?type=srch_catlg&kw=mobile"));
 	
+	@Test
+	public void verifyIfUserIsAbleToAccessShoppingCategorie()
+	{
+		test=extentreports.createTest("verifyIfUserIsAbleToAccessShoppingCategorie");
+		NaptolHomePage naptolhomepage=new NaptolHomePage(driver);
+		naptolhomepage.clickOnShoppingCategories();
+		naptolhomepage.selectShoppingCategories(driver, 3);
+		String currentTitle =driver.getTitle();
+		Assert.assertTrue(currentTitle.contains("Mobile Handsets"));
+		Assert.assertEquals(naptolhomepage.getCategoryHeading(), "Mobiles : Mobile Handsets");
 	}
+
 	
 	@AfterMethod
 	public void addTestStatus(ITestResult result)
@@ -72,7 +76,4 @@ public class verifyIfUserIsAbleToSearchProduct extends BaseTest {
 		 extentreports.flush();
         }
 	
-	 
 }
-
-
