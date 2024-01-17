@@ -1,97 +1,40 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="4" passed="4" failed="0" skipped="0">
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-01-13T22:38:32 IST" name="Default suite" finished-at="2024-01-13T22:39:53 IST" duration-ms="81612">
+  <suite started-at="2024-01-17T22:40:39 IST" name="Default suite" finished-at="2024-01-17T22:42:00 IST" duration-ms="81441">
     <groups>
     </groups>
-    <test started-at="2024-01-13T22:38:32 IST" name="Default test" finished-at="2024-01-13T22:39:53 IST" duration-ms="81612">
-      <class name="test.VerifyDetails">
-        <test-method is-config="true" signature="configureReport()[pri:0, instance:test.VerifyDetails@27f981c6]" started-at="2024-01-13T22:38:32 IST" name="configureReport" finished-at="2024-01-13T22:38:32 IST" duration-ms="522" status="PASS">
+    <test started-at="2024-01-17T22:40:39 IST" name="Default test" finished-at="2024-01-17T22:42:00 IST" duration-ms="81441">
+      <class name="test.ProcessOfPaymentTest">
+        <test-method is-config="true" signature="configureReport()[pri:0, instance:test.ProcessOfPaymentTest@26e356f0]" started-at="2024-01-17T22:40:39 IST" name="configureReport" finished-at="2024-01-17T22:40:40 IST" duration-ms="592" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- configureReport -->
-        <test-method is-config="true" signature="openApp()[pri:0, instance:test.VerifyDetails@27f981c6]" started-at="2024-01-13T22:38:32 IST" name="openApp" finished-at="2024-01-13T22:38:44 IST" duration-ms="11708" status="PASS">
+        <test-method is-config="true" signature="openApp()[pri:0, instance:test.ProcessOfPaymentTest@26e356f0]" started-at="2024-01-17T22:40:40 IST" name="openApp" finished-at="2024-01-17T22:40:47 IST" duration-ms="7463" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- openApp -->
-        <test-method signature="VerifyIfProductsDetailsOnQuickViewTab()[pri:1, instance:test.VerifyDetails@27f981c6]" started-at="2024-01-13T22:38:44 IST" name="VerifyIfProductsDetailsOnQuickViewTab" finished-at="2024-01-13T22:38:48 IST" duration-ms="3731" status="PASS">
+        <test-method signature="verifyThePaymentProcess()[pri:0, instance:test.ProcessOfPaymentTest@26e356f0]" started-at="2024-01-17T22:40:47 IST" name="verifyThePaymentProcess" finished-at="2024-01-17T22:41:59 IST" duration-ms="72353" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- VerifyIfProductsDetailsOnQuickViewTab -->
-        <test-method is-config="true" signature="addTestStatus(org.testng.ITestResult)[pri:0, instance:test.VerifyDetails@27f981c6]" started-at="2024-01-13T22:38:48 IST" name="addTestStatus" finished-at="2024-01-13T22:38:48 IST" duration-ms="29" status="PASS">
+        </test-method> <!-- verifyThePaymentProcess -->
+        <test-method is-config="true" signature="addTestStatus(org.testng.ITestResult)[pri:0, instance:test.ProcessOfPaymentTest@26e356f0]" started-at="2024-01-17T22:41:59 IST" name="addTestStatus" finished-at="2024-01-17T22:41:59 IST" duration-ms="25" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=VerifyIfProductsDetailsOnQuickViewTab status=SUCCESS method=VerifyDetails.VerifyIfProductsDetailsOnQuickViewTab()[pri:1, instance:test.VerifyDetails@27f981c6] output={null}]]]>
+                <![CDATA[[TestResult name=verifyThePaymentProcess status=SUCCESS method=ProcessOfPaymentTest.verifyThePaymentProcess()[pri:0, instance:test.ProcessOfPaymentTest@26e356f0] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- addTestStatus -->
-        <test-method is-config="true" signature="openApp()[pri:0, instance:test.VerifyDetails@27f981c6]" started-at="2024-01-13T22:38:48 IST" name="openApp" finished-at="2024-01-13T22:38:55 IST" duration-ms="7430" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- openApp -->
-        <test-method signature="verifyIfProductsDetailsOnShoppingcartAreSimilarToProductAddedFromQuickViewTab()[pri:2, instance:test.VerifyDetails@27f981c6]" started-at="2024-01-13T22:38:55 IST" name="verifyIfProductsDetailsOnShoppingcartAreSimilarToProductAddedFromQuickViewTab" finished-at="2024-01-13T22:39:01 IST" duration-ms="5680" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyIfProductsDetailsOnShoppingcartAreSimilarToProductAddedFromQuickViewTab -->
-        <test-method is-config="true" signature="addTestStatus(org.testng.ITestResult)[pri:0, instance:test.VerifyDetails@27f981c6]" started-at="2024-01-13T22:39:01 IST" name="addTestStatus" finished-at="2024-01-13T22:39:01 IST" duration-ms="4" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=verifyIfProductsDetailsOnShoppingcartAreSimilarToProductAddedFromQuickViewTab status=SUCCESS method=VerifyDetails.verifyIfProductsDetailsOnShoppingcartAreSimilarToProductAddedFromQuickViewTab()[pri:2, instance:test.VerifyDetails@27f981c6] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- addTestStatus -->
-        <test-method is-config="true" signature="openApp()[pri:0, instance:test.VerifyDetails@27f981c6]" started-at="2024-01-13T22:39:01 IST" name="openApp" finished-at="2024-01-13T22:39:09 IST" duration-ms="8046" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- openApp -->
-        <test-method signature="addSingleToCartAndVerifyIfUnitPriceShippingPriceIsEqualToOrderAmount()[pri:3, instance:test.VerifyDetails@27f981c6]" started-at="2024-01-13T22:39:09 IST" name="addSingleToCartAndVerifyIfUnitPriceShippingPriceIsEqualToOrderAmount" finished-at="2024-01-13T22:39:17 IST" duration-ms="8370" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- addSingleToCartAndVerifyIfUnitPriceShippingPriceIsEqualToOrderAmount -->
-        <test-method is-config="true" signature="addTestStatus(org.testng.ITestResult)[pri:0, instance:test.VerifyDetails@27f981c6]" started-at="2024-01-13T22:39:17 IST" name="addTestStatus" finished-at="2024-01-13T22:39:17 IST" duration-ms="1" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=addSingleToCartAndVerifyIfUnitPriceShippingPriceIsEqualToOrderAmount status=SUCCESS method=VerifyDetails.addSingleToCartAndVerifyIfUnitPriceShippingPriceIsEqualToOrderAmount()[pri:3, instance:test.VerifyDetails@27f981c6] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- addTestStatus -->
-        <test-method is-config="true" signature="openApp()[pri:0, instance:test.VerifyDetails@27f981c6]" started-at="2024-01-13T22:39:17 IST" name="openApp" finished-at="2024-01-13T22:39:29 IST" duration-ms="11368" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- openApp -->
-        <test-method signature="AddTwoToCartAndVerifyIfUnitPriceShippingPriceIsEqualToOrderAmountAndAlsoVerifyIfSumOfOrderAmountIsEqualToCartAmount()[pri:4, instance:test.VerifyDetails@27f981c6]" started-at="2024-01-13T22:39:29 IST" name="AddTwoToCartAndVerifyIfUnitPriceShippingPriceIsEqualToOrderAmountAndAlsoVerifyIfSumOfOrderAmountIsEqualToCartAmount" finished-at="2024-01-13T22:39:48 IST" duration-ms="19207" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- AddTwoToCartAndVerifyIfUnitPriceShippingPriceIsEqualToOrderAmountAndAlsoVerifyIfSumOfOrderAmountIsEqualToCartAmount -->
-        <test-method is-config="true" signature="addTestStatus(org.testng.ITestResult)[pri:0, instance:test.VerifyDetails@27f981c6]" started-at="2024-01-13T22:39:48 IST" name="addTestStatus" finished-at="2024-01-13T22:39:48 IST" duration-ms="0" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=AddTwoToCartAndVerifyIfUnitPriceShippingPriceIsEqualToOrderAmountAndAlsoVerifyIfSumOfOrderAmountIsEqualToCartAmount status=SUCCESS method=VerifyDetails.AddTwoToCartAndVerifyIfUnitPriceShippingPriceIsEqualToOrderAmountAndAlsoVerifyIfSumOfOrderAmountIsEqualToCartAmount()[pri:4, instance:test.VerifyDetails@27f981c6] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- addTestStatus -->
-        <test-method is-config="true" signature="publishReports()[pri:0, instance:test.VerifyDetails@27f981c6]" started-at="2024-01-13T22:39:48 IST" name="publishReports" finished-at="2024-01-13T22:39:53 IST" duration-ms="5420" status="PASS">
+        <test-method is-config="true" signature="publishReports()[pri:0, instance:test.ProcessOfPaymentTest@26e356f0]" started-at="2024-01-17T22:41:59 IST" name="publishReports" finished-at="2024-01-17T22:42:00 IST" duration-ms="934" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- publishReports -->
-      </class> <!-- test.VerifyDetails -->
+      </class> <!-- test.ProcessOfPaymentTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

@@ -3,15 +3,15 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="test.VerifyDetails">
+      <class name="test.ProcessOfPaymentTest">
         <methods>
+          <include name="verifyThePaymentProcess"/>
           <include name="configureReport"/>
-          <include name="addTestStatus"/>
           <include name="publishReports"/>
-          <include name="verifyIfProductsDetailsOnShoppingcartAreSimilarToProductAddedFromQuickViewTab"/>
           <include name="openApp"/>
+          <include name="addTestStatus"/>
         </methods>
-      </class> <!-- test.VerifyDetails -->
+      </class> <!-- test.ProcessOfPaymentTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
