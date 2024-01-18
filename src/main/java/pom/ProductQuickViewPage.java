@@ -14,6 +14,7 @@ public class ProductQuickViewPage {
 	@FindBy (xpath = "//span[@class='offer-price']")private WebElement price;
 	@FindBy (xpath = "//span[@class='ship-price']")private WebElement Shippingcharges;
 	@FindBy (xpath = "//a[@id='cart-panel-button-0']")private WebElement buyButton;
+	@FindBy (xpath = "//ul[@class='sizeBox clearfix']//li")private List<WebElement> colour;
 	
 	public ProductQuickViewPage(WebDriver driver)
 	{
@@ -42,5 +43,13 @@ public class ProductQuickViewPage {
 		String charges=Shippingcharges.getText();
 		String [] charge=charges.split(" ");
 		return Double.parseDouble(charge[1]);
+	}
+	
+	public void selectColor(int index)
+	{
+		if(colour.size()>0)
+		{
+			colour.get(index).click();
+		}
 	}
 }

@@ -27,7 +27,7 @@ public class LaunchBrowser {
 		WebDriver driver=new ChromeDriver();*/
 		driver.get("https://www.naaptol.com/");
 		driver.manage().window().maximize();
-		driver.manage().timeouts().implicitlyWait(Duration.ofMinutes(5000));
+		driver.manage().timeouts().implicitlyWait(Duration.ofMillis(5000));
 		return driver;
 		
 		

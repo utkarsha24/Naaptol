@@ -25,6 +25,7 @@ public class CartPage {
 	@FindBy (xpath = "(//ul[@id='cartTotal']//label)[1]")private WebElement CartTotal;
 	
 	
+	
 	public CartPage(WebDriver driver)
 	{
 		PageFactory.initElements(driver, this);
@@ -74,4 +75,6 @@ public class CartPage {
 	
 		return Double.parseDouble(CartTotal.getText().substring(3).replace(",",""));
 	}
+	
+	
 }
