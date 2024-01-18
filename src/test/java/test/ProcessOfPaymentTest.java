@@ -71,7 +71,7 @@ public class ProcessOfPaymentTest extends BaseTest {
 			processOfPaymentPage=new ProcessOfPaymentPage(driver);
 			processOfPaymentPage.clickOnCheckOut();
 		
-			processOfPaymentPage.enterMobileNumber("7875886922");
+			processOfPaymentPage.enterMobileNumber("7218552342");
 			processOfPaymentPage.clickOnContinue();
 			processOfPaymentPage.clickOnSubmit();
 			
@@ -83,13 +83,17 @@ public class ProcessOfPaymentTest extends BaseTest {
 			processOfPaymentPage.enterPinCode("412106");
 			//processOfPaymentPage.selectState("MAHARASHTRA");
 			//processOfPaymentPage.selectCity("MAVAL");
-			processOfPaymentPage.enterContactNumber("7875886922");
+			processOfPaymentPage.enterContactNumber("7218552342");
 			
 			processOfPaymentPage.clickOnAddAdress();
 			
 			processOfPaymentPage.clickOnshipToThisAdd(0);
 			processOfPaymentPage.clickOnPaymentOption(0);
 			processOfPaymentPage.clickOnPlaceOrder();
+			
+			 System.out.println(processOfPaymentPage.getProductPrice());
+			 Assert.assertEquals(processOfPaymentPage.getProductPrice(),800);
+			 //Assert.assertTrue(cartPage.getCartAmount(driver, 0)==processOfPaymentPage.getProductPrice());
 			
 			processOfPaymentPage.clickOnTrackOrder();
 			processOfPaymentPage.clickOnCancel(driver);

@@ -36,6 +36,7 @@ public class ProcessOfPaymentPage {
 @FindBy (xpath = "//span[text()=' Ship to This Address ']")private List<WebElement> shipToThisAdd; 
 @FindBy (xpath = "//a[text()='Track Order']")private WebElement trackorder;
 @FindBy (xpath = "//a[text()='Cancel Order']")private WebElement cancelOrder;
+@FindBy (xpath= "(//td//span)[6]")private WebElement productOrderPrice;
 
 
 
@@ -127,6 +128,10 @@ public ProcessOfPaymentPage(WebDriver driver)
 	{
 		paymentOption.get(index).click();
 	}
+	
+	 public double getProductPrice() {
+	        return Double.parseDouble(productOrderPrice.getText().replace("/-", ""));
+	    }
 
 	
 	public void clickOnPlaceOrder()

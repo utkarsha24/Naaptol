@@ -15,6 +15,7 @@ import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.Status;
 
 import pojo.LaunchBrowser;
+import pojo.LaunchBrowser1;
 import pom.CartPage;
 import pom.NaptolHomePage;
 import pom.ProductQuickViewPage;
@@ -38,6 +39,7 @@ public class AddtoCartPage extends BaseTest {
 		@BeforeMethod
 		public void openApp(String browser) {
 			driver=LaunchBrowser.browser(browser);
+			
 		}
 	@Test
 	public void verifyIfUserIsAbleToAddProductToCartUsingQuickViewOption() throws InterruptedException {
@@ -48,9 +50,10 @@ public class AddtoCartPage extends BaseTest {
 		naptolhomepage.clickOnSearch();
 		
 		ProductResultPage productResultPage =new ProductResultPage(driver);
-		productResultPage.clickOnQuickView(driver, 0);
+		productResultPage.clickOnQuickView(driver, 1);
 		
 		ProductQuickViewPage productQuickViewPage =new ProductQuickViewPage(driver);
+		productQuickViewPage.selectColor(0);
 		productQuickViewPage.clickOnBuyButton();
 		
 		CartPage cartPage =new CartPage(driver);
